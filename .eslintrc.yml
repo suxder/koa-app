@@ -22,7 +22,6 @@ rules:
   quotes: [2, 'single']
   camelcase: [1, { 'properties': 'never', 'ignoreDestructuring': true }]
   no-var: 2
-  no-console: 2
   no-unused-vars: 1
   no-cond-assign: 2
   no-return-assign: 2

@@ -1,9 +1,9 @@
 const Joi = require('@hapi/joi');
 
 const list = {
-  query: Joi.object({
-    name: Joi.string().required(),
-    age: Joi.number().required()
+  body: Joi.object({
+    email: Joi.string().required(),
+    pwd: Joi.string().required()
   })
 };
 

@@ -7,5 +7,6 @@ module.exports = {
     flag: true,
     outDir: `${pwd}/app/public/log`,
     level: 'info'
-  }
+  },
+  tokenSecret: 'test'
 };

@@ -7,7 +7,7 @@ const utils = require('./common/utils');
 
 const app = new Koa();
 
-const port = '8082';
+const port = '3000';
 const host = '0.0.0.0';
 
 app.context.config = config;

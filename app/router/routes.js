@@ -4,8 +4,8 @@ const { scmTest } = require('../schema/index');
 const routes = [
   {
     //  测试
-    method: 'get',
-    path: '/a',
+    method: 'post',
+    path: '/user/login',
     valid: scmTest.list,
     controller: test.list
   }
