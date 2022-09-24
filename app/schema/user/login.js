@@ -1,6 +1,6 @@
 const Joi = require('@hapi/joi');
 
-const list = {
+const login = {
   body: Joi.object({
     email: Joi.string().required(),
     pwd: Joi.string().required()
@@ -8,5 +8,5 @@ const list = {
 };
 
 module.exports = {
-  list
+  login
 };
