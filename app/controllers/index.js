@@ -1,5 +1,7 @@
-const test = require('./test');
+const { login } = require('./user/login');
+const { getContent } = require('./post/getContent');
 
 module.exports = {
-  test
+  login,
+  getContent
 };

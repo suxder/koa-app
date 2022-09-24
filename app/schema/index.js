@@ -1,5 +1,7 @@
-const scmTest = require('./test');
+const scmUser = require('./user/index');
+const scmPost = require('./post/index');
 
 module.exports = {
-  scmTest
+  scmUser,
+  scmPost
 };

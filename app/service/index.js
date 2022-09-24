@@ -33,6 +33,39 @@ const UserService = {
   }
 };
 
+const PostService = {
+  async findContentByID (postID) {
+    const sql = `
+      SELECT 
+        title, metaTitle, summary, updatedAt, content
+      FROM 
+        post
+      WHERE 
+        id = '${postID}';
+    `;
+    try {
+      const res = await sequelize.query(sql, {
+        type: Sequelize.QueryTypes.SELECT,
+        // 查询方式
+        raw: true,
+        // 是否使用数组组装的方式展示结果
+        logging: false
+        // 是否将 SQL 语句打印到控制台，默认为 true
+      });
+      const data = res;
+      // 直接返回查询后的结果。
+      console.log(data);
+      return data;
+    } catch (error) {
+      return {
+        success: 0,
+        msg: `Service error: ${error}`
+      };
+    }
+  }
+};
+
 module.exports = {
-  UserService
+  UserService,
+  PostService
 };

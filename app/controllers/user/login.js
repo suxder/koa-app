@@ -1,13 +1,13 @@
 // 引入services
-const { UserService } = require('../service/index');
+const { UserService } = require('../../service');
 // 引入jwt
 const jwt = require('jsonwebtoken');
 
-const list = async ctx => {
+const login = async ctx => {
+  console.log('开始');
   const { email, pwd } = ctx.request.body;
   // 使用service方法，得到查询结果
   const res = await UserService.findOne(email, pwd);
-  console.log(res);
   if (res.length > 0) {
     const hashedPassword = res[0].hashedPassword;
     const salt = res[0].salt;
@@ -40,5 +40,5 @@ const list = async ctx => {
 };
 
 module.exports = {
-  list
+  login
 };
